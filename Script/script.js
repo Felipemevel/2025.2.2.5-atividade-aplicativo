@@ -1,11 +1,30 @@
 const key = '6bb6a1e9'
-const url = `https://api.hgbrasil.com/weather?key=${key}&format=json-cors`;
+const url = `https://api.hgbrasil.com/weather?&key=${key}&format=json-cors`;
+
 const nomeCidade = document.getElementById('input-localizacao').value;
 
 const inputLocalizacao = document.getElementById('input-localizacao');
 const displayNomeCidade = document.getElementById('nome-cidade');
 const temperaturaAtual = document.getElementById('temperatura-atual');
 const dataAtual = document.getElementById('data');
+
+const titulo01 = document.getElementById('titulo-1')
+const img01 = document.getElementById('img1')
+
+const titulo02 = document.getElementById('titulo-2') 
+
+
+const titulo03 = document.getElementById('titulo-3') 
+
+
+const titulo04 = document.getElementById('titulo-4') 
+
+
+const titulo05 = document.getElementById('titulo-5') 
+
+
+const titulo06 = document.getElementById('titulo-6') 
+
 
 function carregarClima(cidade = "") {
 

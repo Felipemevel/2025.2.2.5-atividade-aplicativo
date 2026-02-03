@@ -80,3 +80,48 @@ hr {
     display: flex;
     flex-direction: column;
 }
+
+#mini-cards {
+    display: flex;
+    flex-direction: row;
+}
+
+.cards-subs {
+    border: 1px solid #ffffff40;
+    box-shadow: 0 0 10px #00000080;
+    width: 12vh;
+    height: 24vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#card6 {
+    border-radius: 0px 6px 10px 0px;
+}
+
+#card1 {
+    border-radius: 6px 0px 0px 10px;
+}
+
+.titulo-card {
+    font-size: 12px;
+    text-align: center;
+    margin: 20px;
+    color: #ffffff;
+}
+
+.img-mini-cards {
+    height: 4em;
+    
+}
+
+.data-cards {
+    font-size: 12px;
+    margin: 15px;
+}
+
+.graus-cards {
+    font-size: 12px;
+    margin: 15px; 
+}
