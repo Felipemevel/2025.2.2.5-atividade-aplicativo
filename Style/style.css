@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(25, 25, 99)
+}
+
+header {
+    width: 100%;
+    color: #ffffff;
+    margin: 15px 0px;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header hr {
+    width: 100%;
+    margin-top: 15px;
+    border: 1px solid #ffffff;
+}
