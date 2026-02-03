@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,24 +9,46 @@
     <link rel="stylesheet" href="Style/style.css">
     <script src="Script/script.js" defer></script>
 </head>
+
 <body>
 
     <header>
         <h1>
             Infoclima - Portal Meteorológico
         </h1>
-        <hr>
+        <div>
+            <input type="text" id="input-localizacao" placeholder="Digite a localização">
+            <span id="dark-ligh-mode">ICON-THEME</span>
+        </div>
     </header>
+    <hr>
     <main id="container-principal">
         <div id="cards-home">
-            <div class="cards">
+            <div class="card-home" id="card-tempo-atual">
+                <div class="container-titulo">
+                    <h2>Previsão do tempo para: <span id="nome-cidade">Carregando....</span></h2>
+                    <p id="data">Carregando...</p>
+                </div>
 
+                <div class="container-detalhes">
+
+                    <div id="descricao-tempo-atual">
+                        <span id="descricao">Carregando...</span>
+
+                    </div>
+                    <div id="tempo-atual">
+                        <span class="icon-wheather"><img src="img/hg-brasil-moon-phases/last_quarter.png" alt=""></span>
+                        <p id="temperatura-atual">--°C</p>
+                    </div>
+                </div>
             </div>
         </div>
-        <div id="cards-favoritados">
+        <h4>Locais favoritos</h4>
+        <div id="cards-mini">
 
         </div>
     </main>
 
 </body>
+
 </html>
