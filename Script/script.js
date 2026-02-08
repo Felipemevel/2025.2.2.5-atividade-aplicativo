@@ -1,5 +1,5 @@
 const key = '03f5150c '
-const url = `https://api.hgbrasil.com/weather?array_limit=7&key=${key}&format=json-cors`;
+const url = `https://api.hgbrasil.com/weather?&key=${key}&format=json-cors`;
 
 const nomeCidade = document.getElementById('input-localizacao').value;
 
