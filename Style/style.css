@@ -331,6 +331,19 @@ h4 {
         gap: 15px;
     }
 
+    #favoritar-local {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    }
+
+    #btn-favoritar {
+        margin: 20px auto; /* Garante margem automática nas laterais */
+        display: block;    /* Transforma em bloco para aceitar o auto margin */
+        width: 80%;        /* Opcional: deixa o botão um pouco mais largo no toque */
+        max-width: 250px;
+    }
+
     #input-localizacao {
         width: 100%;
     }
