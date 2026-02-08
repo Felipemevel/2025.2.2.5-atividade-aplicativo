@@ -18,7 +18,6 @@
         </h1>
         <div>
             <input type="text" id="input-localizacao" placeholder="Digite a localização">
-            <span id="dark-ligh-mode">ICON-THEME</span>
         </div>
     </header>
     <hr>
@@ -33,14 +32,19 @@
                 <div class="container-detalhes">
 
                     <div id="descricao-tempo-atual">
-                        <span id="descricao">Carregando...</span>
+                        <p>Umidade: <span id="umidade-atual">--%</span></p>
+                        <p>Vento: <span id="vento-atual">-- km/h</span></p>
+                        <p>Tempo: <span id="tempo-descricao">Carregando...</span></p>
 
                     </div>
                     <div id="tempo-atual">
-                        <span class="icon-wheather"><img src="img/hg-brasil-moon-phases/last_quarter.png" alt=""></span>
+                        <span id="icon-tempo-atual"class="icon-wheather"><img src="" alt=""></span>
                         <p id="temperatura-atual">--°C</p>
                     </div>
                 </div>
+                <aside id="favoritar-local">
+                    <button id="btn-favoritar">Adicionar aos favoritos</button>
+                </aside>
             </div>
         </div>
         <div id="mini-cards">
@@ -52,11 +56,11 @@
 
                 <img src="img/hg-brasil-conditions-slugs/clear_day.svg" alt="" id="img1" class="img-mini-cards">
 
-                <p class="graus-cards">
+                <p id="graus-1" class="graus-cards">
                     - -°C
                 </p>
 
-                <p class="data-cards">
+                <p id="data-1" class="data-cards">
                     Carregando...
                 </p>
 
@@ -67,81 +71,13 @@
                     Carregando...
                 </h3>
 
-                <img src="img/hg-brasil-conditions-slugs/clear_day.svg" alt="" class="img-mini-cards">
+                <img src="img/hg-brasil-conditions-slugs/clear_day.svg" alt="" id="img2" class="img-mini-cards">
 
-                <p class="graus-cards">
+                <p id="graus-2" class="graus-cards">
                     - -°C
                 </p>
 
-                <p class="data-cards">
-                    Carregando...
-                </p>
-                
-            </div>
-            <div id="card3" class="cards-subs">
-
-                <h3 id="titulo-3" class="titulo-card">
-                    Carregando...
-                </h3>
-
-                <img src="img/hg-brasil-conditions-slugs/clear_day.svg" alt="" class="img-mini-cards">
-
-                <p class="graus-cards">
-                    - -°C
-                </p>
-
-                <p class="data-cards">
-                    Carregando...
-                </p>
-                
-            </div>
-            <div id="card4" class="cards-subs">
-
-                <h3 id="titulo-4" class="titulo-card">
-                    Carregando...
-                </h3>
-
-                <img src="img/hg-brasil-conditions-slugs/clear_day.svg" alt="" class="img-mini-cards">
-
-                <p class="graus-cards">
-                    - -°C
-                </p>
-
-                <p class="data-cards">
-                    Carregando...
-                </p>
-                
-            </div>
-            <div id="card5" class="cards-subs">
-
-                <h3 id="titulo-5" class="titulo-card">
-                    Carregando...
-                </h3>
-
-                <img src="img/hg-brasil-conditions-slugs/clear_day.svg" alt="" class="img-mini-cards">
-
-                <p class="graus-cards">
-                    - -°C
-                </p>
-
-                <p class="data-cards">
-                    Carregando...
-                </p>
-                
-            </div>
-            <div id="card6" class="cards-subs">
-
-                <h3 id="titulo-6" class="titulo-card">
-                    Carregando...
-                </h3>
-
-                <img src="img/hg-brasil-conditions-slugs/clear_day.svg" alt="" class="img-mini-cards">
-
-                <p class="graus-cards">
-                    - -°C
-                </p>
-
-                <p class="data-cards">
+                <p id="data-2" class="data-cards">
                     Carregando...
                 </p>
                 
@@ -149,7 +85,7 @@
         </div>
         <h4>Locais favoritos</h4>
         <div id="cards-favoritos">
-
+            <p>Nenhuma localidade foi favoritada</p>
         </div>
     </main>
 

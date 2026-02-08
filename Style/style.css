@@ -1,70 +1,96 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: rgb(25, 25, 99);
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    color: #ffffff;
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
 }
 
 header {
-    color: #ffffff;
-    margin: 15px;
+    margin: 20px 40px;
     flex-direction: row;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
+header h1 {
+    font-size: 1.5rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
 #input-localizacao {
-    padding: 5px;
-    border-radius: 5px;
-    border: none;
+    padding: 10px 15px;
+    border-radius: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
     outline: none;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+}
+
+#input-localizacao::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+#input-localizacao:focus {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: #ffffff;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
 }
 
 hr {
-    margin-top: 15px;
-    border: 1px solid #ffffff40;
-    box-shadow: 0 0 10px #00000080;
+    margin-top: 5px;
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0));
 }
 
 #container-principal {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 30px;
     gap: 30px;
-    color: #ffffff;
+    width: 100%;
 }
 
 #cards-home {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    width: 70%;
-    max-width: 700px;
-    border: 1px solid #ffffff40;
-    border-radius: 8px;
-    box-shadow: 0 0 10px #00000080;
+    width: 90%;
+    max-width: 800px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
 }
 
 #tempo-atual {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
+    padding: 30px;
 }
 
 .container-detalhes {
     display: flex;
-    flex-direction: row;     
-    justify-content: space-between; 
-    align-items: center;      
-    gap: 50px;                
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
     width: 100%;
     margin-top: 20px;
 }
@@ -73,55 +99,258 @@ hr {
     margin: 10px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 5px;
 }
 
-#descricao-tempo-atual, #tempo-atual {
+.container-titulo h2 {
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+#data {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+#descricao-tempo-atual,
+#tempo-atual {
     display: flex;
     flex-direction: column;
+}
+
+#descricao-tempo-atual p {
+    font-size: 1.1rem;
+    margin: 5px 0;
+    font-weight: 300;
+}
+
+#descricao-tempo-atual span {
+    font-weight: 500;
+}
+
+#temperatura-atual {
+    font-size: 3.5rem;
+    font-weight: 700;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 #mini-cards {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 800px;
+    gap: 20px;
+    margin-bottom: 20px;
 }
 
 .cards-subs {
-    border: 1px solid #ffffff40;
-    box-shadow: 0 0 10px #00000080;
-    width: 12vh;
-    height: 24vh;
+    flex: 1;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    min-height: 200px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(4px);
+    transition: transform 0.3s ease;
 }
 
-#card6 {
-    border-radius: 0px 6px 10px 0px;
-}
-
-#card1 {
-    border-radius: 6px 0px 0px 10px;
+.cards-subs:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-5px);
 }
 
 .titulo-card {
-    font-size: 12px;
-    text-align: center;
-    margin: 20px;
-    color: #ffffff;
+    font-size: 1.1rem;
+    margin: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .img-mini-cards {
-    height: 4em;
-    
+    height: 70px;
+    margin: 15px 0;
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.4));
 }
 
 .data-cards {
-    font-size: 12px;
-    margin: 15px;
+    font-size: 0.85rem;
+    margin: 10px;
+    opacity: 0.7;
 }
 
 .graus-cards {
-    font-size: 12px;
-    margin: 15px; 
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 5px;
+}
+
+h4 {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    opacity: 0.9;
+    letter-spacing: 0.5px;
+}
+
+#cards-favoritos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    width: 90%;
+    max-width: 800px;
+    gap: 20px;
+    margin: 0 auto 40px auto;
+    overflow-x: auto;
+    padding: 20px 5px;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+
+#cards-favoritos::-webkit-scrollbar {
+    height: 8px;
+}
+
+#cards-favoritos::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+}
+
+#cards-favoritos::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    transition: background 0.3s;
+}
+
+#cards-favoritos::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.mini-cards-favs {
+    flex: 0 0 200px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    min-height: 220px;
+    backdrop-filter: blur(4px);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.mini-cards-favs:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.4);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.mini-cards-favs h5 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #ffcc00;
+    margin-bottom: 25px;
+}
+
+.mini-cards-favs img {
+    height: 80px;
+    width: auto;
+    margin: 30px 0;
+    filter: drop-shadow(0 0 3px rgba(255, 255, 255, 0.5));
+}
+
+#btn-favoritar {
+    padding: 12px 25px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin: 20px;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+}
+
+#btn-favoritar:hover {
+    background: #ffffff;
+    color: #302b63;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+}
+
+.remover-favorito {
+    margin-top: 15px;
+    padding: 6px 15px;
+    border: none;
+    border-radius: 20px;
+    background: linear-gradient(45deg, #ff416c, #ff4b2b);
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.remover-favorito:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(255, 75, 43, 0.5);
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+        margin: 20px;
+    }
+
+    header div {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    #input-localizacao {
+        width: 100%;
+    }
+
+    #cards-home {
+        flex-direction: column;
+        width: 90%;
+        padding: 20px 0;
+    }
+
+    .container-detalhes {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    #mini-cards {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .cards-subs {
+        width: 100%;
+        min-height: 150px;
+    }
+
+    #cards-favoritos {
+        width: 95%;
+    }
 }
