@@ -8,17 +8,25 @@
     <link rel="icon" href="img/hg-brasil-conditions-slugs/cloud.svg" type="image/x-icon">
 
     <link rel="stylesheet" href="Style/style.css">
+    <script src="Script/translate.js" defer></script>
     <script src="Script/script.js" defer></script>
+
 </head>
 
 <body>
 
     <header>
-        <h1>
+        <h1 data-i18n="portal-title">
             Infoclima - Portal Meteorológico
         </h1>
+
+        <div id="idioma-selector">
+            <button id="btn-pt">PT-BR</button>
+            <button id="btn-en">EN</button>
+        </div>
+
         <div>
-            <input type="text" id="input-localizacao" placeholder="Digite a localização">
+            <input type="text" id="input-localizacao" data-i18n-placeholder="search-placeholder" placeholder="Digite a localização">
         </div>
     </header>
     <hr>
@@ -26,16 +34,16 @@
         <div id="cards-home">
             <div class="card-home" id="card-tempo-atual">
                 <div class="container-titulo">
-                    <h2>Previsão do tempo para: <span id="nome-cidade">Carregando....</span></h2>
+                    <h2><span data-i18n="weather-for">Previsão do tempo para:</span> <span id="nome-cidade">Carregando....</span></h2>
                     <p id="data">Carregando...</p>
                 </div>
 
                 <div class="container-detalhes">
 
                     <div id="descricao-tempo-atual">
-                        <p>Umidade: <span id="umidade-atual">--%</span></p>
-                        <p>Vento: <span id="vento-atual">-- km/h</span></p>
-                        <p>Tempo: <span id="tempo-descricao">Carregando...</span></p>
+                        <p><span data-i18n="humidity">Umidade:</span> <span id="umidade-atual">--%</span></p>
+                        <p><span data-i18n="wind">Vento:</span> <span id="vento-atual">-- km/h</span></p>
+                        <p><span data-i18n="weather">Tempo:</span> <span id="tempo-descricao">Carregando...</span></p>
 
                     </div>
                     <div id="tempo-atual">
@@ -44,7 +52,7 @@
                     </div>
                 </div>
                 <aside id="favoritar-local">
-                    <button id="btn-favoritar">Adicionar aos favoritos</button>
+                    <button id="btn-favoritar" data-i18n="btn-favorite">Adicionar aos favoritos</button>
                 </aside>
             </div>
         </div>
@@ -84,9 +92,9 @@
                 
             </div>
         </div>
-        <h4>Locais favoritos</h4>
+        <h4 data-i18n="fav-locations">Locais favoritos</h4>
         <div id="cards-favoritos">
-            <p>Nenhuma localidade foi favoritada</p>
+            <p data-i18n="no-favorites">Nenhuma localidade foi favoritada</p>
         </div>
     </main>
 
